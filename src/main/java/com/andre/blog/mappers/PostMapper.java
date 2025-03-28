@@ -1,8 +1,6 @@
 package com.andre.blog.mappers;
 
-import com.andre.blog.domain.dtos.CreatePostRequest;
-import com.andre.blog.domain.dtos.CreatePostRequestDto;
-import com.andre.blog.domain.dtos.PostDto;
+import com.andre.blog.domain.dtos.*;
 import com.andre.blog.domain.entities.Post;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
@@ -15,4 +13,5 @@ public interface PostMapper {
     @Mapping(target = "tags", source = "tags")
     PostDto toDto(Post post);
     CreatePostRequest toCreatePostRequest(CreatePostRequestDto dto);
+    UpdatePostRequest toUpdatePostRequest(UpdatePostRequestDto dto);
 }

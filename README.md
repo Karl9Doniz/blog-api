@@ -23,18 +23,18 @@ Since the project uses docker for database initialization, be cure to run:
 Open separate terminal, clean and install:
 
 ```bash
-    ./mvnw clean install
+  ./mvnw clean install
 ```
 
 Then run:
 
 ```bash
-    ./mvnw spring-boot:run
+  ./mvnw spring-boot:run
 ```
 
 Or use your IDE tools to build the project.
 
-From here, you may use Postman or other instrument to work with the api.
+From here, you may use Postman or other instrument to work with what API allows.
 
 ### Project description
 

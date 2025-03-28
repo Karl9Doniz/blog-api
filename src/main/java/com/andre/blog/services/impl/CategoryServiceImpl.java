@@ -26,7 +26,7 @@ public class CategoryServiceImpl implements CategoryService {
     @Override
     @Transactional
     public Category createCategory(Category category) throws IllegalAccessException {
-        if (categoryRepository.existsById(UUID.fromString(category.getName()))) {
+        if (categoryRepository.findByName(category.getName()).isPresent()) {
             throw new IllegalAccessException("Category already exists with name: " + category.getName());
         }
 
